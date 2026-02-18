@@ -1,7 +1,7 @@
 
 # Demonstrating variables and data types in Python
 
-
+# commit changes
 # String
 name = "algorithms365"  # String value
 print(f"String: name = {name}")
