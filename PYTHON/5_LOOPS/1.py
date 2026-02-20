@@ -20,7 +20,7 @@ for item in range (0, 10, 2):
 
 #for (int index=10, index>1, index--)
 #  in C++ is equivalent to for item in range (10, 0, -1) in Python
-for item in range (10, 0, -1):
+for item in range (10, 0, -1): #ulta counting
     print(item)
     
 
