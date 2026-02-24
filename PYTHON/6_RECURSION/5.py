@@ -1,13 +1,26 @@
-def printNumber(number):
 
-    if(number == 0):
-        return
-    
-    number = number - 1
+import os
 
-    print(f"Before recursion: {number}")
-    printNumber(number)
+def explore_directories(root_directory):
+    # Use a stack to store directories to be explored
+    stack = [root_directory]
 
-    print(f"After recursion: {number}")
+    while stack:
+        current_directory = stack.pop()
+        try:
+            entries = os.listdir(current_directory)
+            for entry in entries:
+                path = os.path.join(current_directory, entry)
+                if os.path.isdir(path):
+                    print(path)
+                    stack.append(path)
+        except PermissionError:
+            # Handle the case where the program doesn't have permission to access a directory
+            print(f"Permission denied: {current_directory}")
+        except FileNotFoundError:
+            # Handle the case where a directory was not found
+            print(f"Directory not found: {current_directory}")
 
-printNumber(5)
+# Example usage
+root_directory = "C:\\RecurssionDemo"  # Replace with the root directory path you want to explore
+explore_directories(root_directory)
