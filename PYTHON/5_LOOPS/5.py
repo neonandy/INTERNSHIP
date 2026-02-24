@@ -1,17 +1,30 @@
 
-"""
-total = 0
+#concatinating with list
+def print_star_grid_concat(gridSize):
+    for row in range(gridSize):
+        printMsg = []
+        for noOfStars in range(gridSize):
+            printMsg.append("*")
 
-for i in range(1, 6):
-    total = total + i
+        print("".join(printMsg))
+    
+print_star_grid_concat(5)
 
-print(total)
-"""
 
-total = 0
+#printing star only at borders/ skipping the border
 
-for i in range(1, 11):
-    if i % 2 == 0:
-        total = i
+def print_star_grid_borders_only(gridSize):
+    for row in range(1, gridSize+1, 1):
+        printMsg = []
 
-print(total)
+        for column in range(1, gridSize+1, 1):
+            isStar = column == 1 or column == gridSize or row == 1 or row == gridSize
+            # Use conditional expression to append "*" or " "
+            printMsg.append("*" if isStar else " ")
+            #printMsg.append(str(row) + "," + str(column) + " ")
+
+        print("".join(printMsg))
+    
+print_star_grid_borders_only(5)
+
+
