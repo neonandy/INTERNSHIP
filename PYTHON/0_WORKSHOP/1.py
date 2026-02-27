@@ -15,6 +15,7 @@ sum2 = getSum("Hii", " Anu Madum")
 print("Sum of two numbers is:", sum2)
 
 #wecan write like this also
+
 def getIntegerSum(number1: int, number2: int)-> int:
     return number1 + number2
 
