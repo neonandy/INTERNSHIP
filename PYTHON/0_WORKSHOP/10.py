@@ -17,7 +17,7 @@ print("Sum of the numbers =", result)
 
 def get_sumSimple(numbers):
 
-    sum = 0
+   # sum = 0
     length = len(numbers)
     
     for index in range(0, length, 1):
@@ -25,6 +25,6 @@ def get_sumSimple(numbers):
     
     return sum
 
-numbers = [1, 2, 3, 4, 5]
+numbers = ["nandy", "sandy", "andy", "mandy"]
 result = get_sumSimple(numbers)
 print("Sum of the numbers =", result)
