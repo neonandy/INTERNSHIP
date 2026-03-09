@@ -21,4 +21,4 @@ input1 = [1, 2, 100, 4, 5 , -1]
 
 
 resultMax, resultMin = getMaxMin(input1)
-(f'{resultMax}, {resultMin} ')
+print(f'{resultMax}, {resultMin} ')
