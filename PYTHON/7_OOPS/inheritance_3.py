@@ -1,22 +1,5 @@
-#one parent multiple child classes
 
-class Person:
-
-    def __init__(self, name):
-        self.name = name
-
-
-class Student(Person):
-
-    def __init__(self, name, marks):
-        super().__init__(name)   # calling parent constructor
-        self.marks = marks
-
-
-# Usage
-s = Student("Nandan", 85)
-
-print(s.name)
+#Hierarchical inheritance — one parent, many children
 class Shape:
     def __init__(self, color):
         self.color = color
@@ -56,3 +39,6 @@ r = Rectangle("blue", 4, 6)
 c.describe()    # "I am a red shape"  ← from Shape
 print(c.area()) # 78.5               ← own method
 print(r.area()) # 24                 ← own method
+
+print(Triangle.__mro__)
+#(Method Resolution Order) shows the exact chain Python searches when you call any method.
