@@ -57,7 +57,6 @@ class Bank:
         print(f"\nID:{account.id}\n Holder Name {account.holder_name}")
         return account
     
-
 #creating objects
 
 NBK = Bank("Nandan Bank of Karnataka", "Hosadurga")
