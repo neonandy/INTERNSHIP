@@ -4,7 +4,7 @@ def find_all_routes(cities: list):
     # Generate every possible ordering of cities
     # 3 cities → 6 routes
     # 5 cities → 120 routes
-    # 10 cities → 3,628,800 routes 💀
+    # 10 cities → 3,628,800 routes 
     all_possible_routes = list(permutations(cities))    # n! arrangements
 
     # Check every route — this is brute force Travelling Salesman
@@ -41,7 +41,7 @@ find_all_routes(cities)
 
 
 ### Complete Growth at a Glance
-
+"""
 n = 5:
 
 O(1)      →           1 operation   ✅ Instant
@@ -51,3 +51,5 @@ O(n log n)→          10 operations  🟡 Fast
 O(n²)     →          25 operations  🟠 Okay
 O(2ⁿ)     →          32 operations  🔴 Slow
 O(n!)     →         120 operations  💀 Avoid
+
+"""
