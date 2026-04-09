@@ -1,6 +1,6 @@
 tasks = []
 
-def show_tasks():
+def show_tasks(): #O(n)
     if not tasks:
         print("No tasks yet.")
     else:
@@ -8,13 +8,13 @@ def show_tasks():
         for i, task in enumerate(tasks, 1):
             print(f"{i}. {task}")
 
-def add_task(task):
+def add_task(task):  # O(1)
     tasks.append(task)
     print(f"✅ '{task}' added!")
 
-def delete_task(number):
+def delete_task(number):  # O(n)
     removed = tasks.pop(number - 1)
-    print(f"✅ '{removed}' removed!")
+    print(f"🗑️ '{removed}' deleted!")
 
 
 #creating object / USAGE
